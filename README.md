@@ -1,3 +1,3 @@
 # 📰 The STEM Gazette
 
-The code and content of the stem gazette
+The source code and content of the new STEM Gazette
