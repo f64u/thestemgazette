@@ -153,6 +153,7 @@ collections:
   - name: aboutus
     label: "About Us"
     media_folder: /content/assets/aboutus
+    public_folder: /content/assets/aboutus
     files:
       - name: authors
         label: Authors
