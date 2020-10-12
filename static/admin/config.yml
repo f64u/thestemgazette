@@ -1,6 +1,12 @@
 backend:
   name: git-gateway
   branch: main
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
 
 media_folder: static/assets
 public_folder: /assets
@@ -10,8 +16,28 @@ collections:
     label: Blog
     folder: content/blog
     create: true
+    slug: "{{slug}}"
+    media_folder: ""
+    public_folder: ""
+    path: "{{category}}/{{title}}/index"
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
+      - { name: date, label: "Publish Date", widget: datetime }
+      - { name: description, label: Description }
+      - { name: illustration, label: "Illustration", widget: image }
+      - name: category
+        label: "Category"
+        widget: select
+        default: "news"
+        options:
+          - { label: "News & Announcements", value: "news" }
+          - { label: "Events", value: "events" }
+          - { label: "Awards & Honors", value: "awards" }
+          - { label: "Exchange Programs", value: "exchange" }
+          - { label: "International College Admissions", value: "admissions" }
+          - {
+              label: "Domestic Grade 12 Ranks & College Coordination",
+              value: "domestic",
+            }
+          - { label: "Student Submissions", value: "student-submissions" }
       - { name: body, label: Body, widget: markdown }
