@@ -19,7 +19,7 @@ collections:
     slug: "{{slug}}"
     media_folder: ""
     public_folder: ""
-    path: "{{category}}/{{title}}/index"
+    path: "{{category}}/{{title}}-{{date}}/index"
     fields:
       - { name: title, label: Title }
       - { name: date, label: "Publish Date", widget: datetime }
