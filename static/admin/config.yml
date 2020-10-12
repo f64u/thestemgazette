@@ -8,36 +8,161 @@ backend:
     uploadMedia: "[skip ci] Upload “{{path}}”"
     deleteMedia: "[skip ci] Delete “{{path}}”"
 
-media_folder: static/assets
+media_folder: content/assets
 public_folder: /assets
 
 collections:
-  - name: blog
-    label: Blog
-    folder: content/blog
+  # ======================================= <POSTS> =======================================
+  - name: news
+    label: "News & Announcements"
+    folder: content
     create: true
     slug: "{{slug}}"
     media_folder: ""
     public_folder: ""
-    path: "{{category}}/{{title}}-{{date}}/index"
+    path: "posts/news/{{title}}-{{year}}{{month}}{{day}}/index"
     fields:
       - { name: title, label: Title }
       - { name: date, label: "Publish Date", widget: datetime }
       - { name: description, label: Description }
+      - { name: author, label: Author }
       - { name: illustration, label: "Illustration", widget: image }
-      - name: category
-        label: "Category"
-        widget: select
-        default: "news"
-        options:
-          - { label: "News & Announcements", value: "news" }
-          - { label: "Events", value: "events" }
-          - { label: "Awards & Honors", value: "awards" }
-          - { label: "Exchange Programs", value: "exchange" }
-          - { label: "International College Admissions", value: "admissions" }
-          - {
-              label: "Domestic Grade 12 Ranks & College Coordination",
-              value: "domestic",
-            }
-          - { label: "Student Submissions", value: "student-submissions" }
       - { name: body, label: Body, widget: markdown }
+      - name: category
+        label: Category
+        widget: select
+        default: news
+        options:
+          - { label: News, value: news }
+          - { label: Announcement, value: announcement }
+
+  - name: events
+    label: "Events"
+    folder: content
+    create: true
+    slug: "{{slug}}"
+    media_folder: ""
+    public_folder: ""
+    path: "posts/events/{{title}}-{{year}}{{month}}{{day}}/index"
+    fields:
+      - { name: title, label: Title }
+      - { name: date, label: "Publish Date", widget: datetime }
+      - { name: description, label: Description }
+      - { name: author, label: Author }
+      - { name: illustration, label: "Illustration", widget: image }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: awards
+    label: "Awards & Honors"
+    folder: content
+    create: true
+    slug: "{{slug}}"
+    media_folder: ""
+    public_folder: ""
+    path: "posts/awards/{{title}}-{{year}}{{month}}{{day}}/index"
+    fields:
+      - { name: title, label: Title }
+      - { name: date, label: "Publish Date", widget: datetime }
+      - { name: description, label: Description }
+      - { name: author, label: Author }
+      - { name: illustration, label: "Illustration", widget: image }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: exchange
+    label: "Exchange Programs"
+    folder: content
+    create: true
+    slug: "{{slug}}"
+    media_folder: ""
+    public_folder: ""
+    path: "posts/exchange/{{title}}-{{year}}{{month}}{{day}}/index"
+    fields:
+      - { name: title, label: Title }
+      - { name: date, label: "Publish Date", widget: datetime }
+      - { name: description, label: Description }
+      - { name: author, label: Author }
+      - { name: illustration, label: "Illustration", widget: image }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: admissions
+    label: "International College Admissions"
+    folder: content
+    create: true
+    slug: "{{slug}}"
+    media_folder: ""
+    public_folder: ""
+    path: "posts/admissions/{{title}}-{{year}}{{month}}{{day}}/index"
+    fields:
+      - { name: title, label: Title }
+      - { name: date, label: "Publish Date", widget: datetime }
+      - { name: description, label: Description }
+      - { name: author, label: Author }
+      - { name: illustration, label: "Illustration", widget: image }
+      - { name: body, label: Body, widget: markdown }
+      - name: category
+        label: Category
+        options:
+          - { label: "EDI Admissions", value: ed1 }
+          - { label: "EDII Admissions", value: ed2 }
+          - { label: "EA Admissions", value: ea }
+          - { label: "REA Admissions", value: rea }
+          - { label: "Non-US Amissions", value: nonus }
+
+  - name: domestic
+    label: "Grade 12 Domestic Ranks & College Coordination"
+    folder: content
+    create: true
+    slug: "{{slug}}"
+    media_folder: ""
+    public_folder: ""
+    path: "posts/domestic/{{title}}-{{year}}{{month}}{{day}}/index"
+    fields:
+      - { name: title, label: Title }
+      - { name: date, label: "Publish Date", widget: datetime }
+      - { name: description, label: Description }
+      - { name: author, label: Author }
+      - { name: illustration, label: "Illustration", widget: image }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: student_submissions
+    label: "Student Submissions"
+    folder: content
+    create: true
+    slug: "{{slug}}"
+    media_folder: ""
+    public_folder: ""
+    path: "posts/student-submissions/{{title}}-{{year}}{{month}}{{day}}/index"
+    fields:
+      - { name: title, label: Title }
+      - { name: date, label: "Publish Date", widget: datetime }
+      - { name: description, label: Description }
+      - {
+          name: author,
+          label: Author,
+          widget: relation,
+          collection: authors,
+          value_field: authors.*.full_name,
+          search_fields: ["authors.*.full_name", "authors.*.email"],
+        }
+      - { name: illustration, label: "Illustration", widget: image }
+      - { name: body, label: Body, widget: markdown }
+      - { name: tags, label: Tags, widget: list }
+
+  # ======================================= </POSTS> =======================================
+
+  - name: aboutus
+    label: "About Us"
+    media_folder: content/assets/aboutus
+    files:
+      - name: authors
+        label: Authors
+        file: content/aboutus/authors.json
+        fields:
+          - name: authors
+            label: authors
+            widget: list
+            allow_add: true
+            fields:
+              - { name: full_name, label: "Full Name" }
+              - { name: email, label: "Email" }
+              - { name: avatar, label: "Avatar", widget: image }
