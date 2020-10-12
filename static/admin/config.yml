@@ -152,11 +152,11 @@ collections:
 
   - name: aboutus
     label: "About Us"
-    media_folder: content/assets/aboutus
     files:
       - name: authors
         label: Authors
         file: content/aboutus/authors.json
+        media_folder: content/assets/aboutus
         fields:
           - name: authors
             label: authors
