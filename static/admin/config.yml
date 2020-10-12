@@ -153,11 +153,13 @@ collections:
   - name: aboutus
     label: "About Us"
     media_folder: /content/assets/aboutus
-    public_folder: /content/assets/aboutus
+    public_folder: /assets/aboutus
     files:
       - name: authors
         label: Authors
         file: content/aboutus/authors.json
+        editor:
+          enable_preview: false
         fields:
           - name: authors
             label: authors
