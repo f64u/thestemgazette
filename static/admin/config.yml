@@ -203,6 +203,25 @@ collections:
     fields:
       - { name: full_name, label: "Full Name" }
       - { name: email, label: Email }
-      - { name: role, lable: Role }
+      - {
+          name: roles,
+          label: "Role(s)",
+          widget: relation,
+          multiple: true,
+          value_field: name,
+          search_fields: ["name"],
+          collection: roles,
+        }
       - { name: bio, label: Bio }
       - { name: avatar, label: Avatar, widget: image }
+
+  - name: roles
+    label: Roles
+    folder: content/roles
+    create: true
+    slug: "{{name}}"
+    identifier_field: name
+    editor:
+      preview: false
+    fields:
+      - { name: name, label: Name }
