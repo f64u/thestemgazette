@@ -1,9 +1,9 @@
 ---
 typeKey: people
 full_name: Omar Khaled
-email: lskajfd
+email: 18047@stemegypt.edu.eg
 roles:
   - Author
-bio: l;sadkfjaslfkj
-avatar: logo.png
+bio: A STEM October Student
+avatar: omarkhaled.jpeg
 ---
