@@ -22,6 +22,12 @@ collections:
     public_folder: ""
     path: "{{title}}-{{year}}{{month}}{{day}}/index"
     fields:
+      - {
+          name: "typeKey",
+          label: "Type Key",
+          widget: "hidden",
+          default: "posts",
+        }
       - { name: title, label: Title }
       - { name: date, label: "Publish Date", widget: datetime }
       - { name: description, label: Description }
@@ -53,6 +59,12 @@ collections:
     public_folder: ""
     path: "{{title}}-{{year}}{{month}}{{day}}/index"
     fields:
+      - {
+          name: "typeKey",
+          label: "Type Key",
+          widget: "hidden",
+          default: "posts",
+        }
       - { name: title, label: Title }
       - { name: date, label: "Publish Date", widget: datetime }
       - { name: description, label: Description }
@@ -77,6 +89,12 @@ collections:
     public_folder: ""
     path: "{{title}}-{{year}}{{month}}{{day}}/index"
     fields:
+      - {
+          name: "typeKey",
+          label: "Type Key",
+          widget: "hidden",
+          default: "posts",
+        }
       - { name: title, label: Title }
       - { name: date, label: "Publish Date", widget: datetime }
       - { name: description, label: Description }
@@ -101,6 +119,12 @@ collections:
     public_folder: ""
     path: "{{title}}-{{year}}{{month}}{{day}}/index"
     fields:
+      - {
+          name: "typeKey",
+          label: "Type Key",
+          widget: "hidden",
+          default: "posts",
+        }
       - { name: title, label: Title }
       - { name: date, label: "Publish Date", widget: datetime }
       - { name: description, label: Description }
@@ -125,6 +149,12 @@ collections:
     public_folder: ""
     path: "{{title}}-{{year}}{{month}}{{day}}/index"
     fields:
+      - {
+          name: "typeKey",
+          label: "Type Key",
+          widget: "hidden",
+          default: "posts",
+        }
       - { name: title, label: Title }
       - { name: date, label: "Publish Date", widget: datetime }
       - { name: description, label: Description }
@@ -157,6 +187,12 @@ collections:
     public_folder: ""
     path: "{{title}}-{{year}}{{month}}{{day}}/index"
     fields:
+      - {
+          name: "typeKey",
+          label: "Type Key",
+          widget: "hidden",
+          default: "posts",
+        }
       - { name: title, label: Title }
       - { name: date, label: "Publish Date", widget: datetime }
       - { name: description, label: Description }
@@ -181,6 +217,12 @@ collections:
     public_folder: ""
     path: "{{title}}-{{year}}{{month}}{{day}}/index"
     fields:
+      - {
+          name: "typeKey",
+          label: "Type Key",
+          widget: "hidden",
+          default: "posts",
+        }
       - { name: title, label: Title }
       - { name: date, label: "Publish Date", widget: datetime }
       - { name: description, label: Description }
@@ -201,6 +243,12 @@ collections:
     editor:
       preview: false
     fields:
+      - {
+          name: "typeKey",
+          label: "Type Key",
+          widget: "hidden",
+          default: "people",
+        }
       - { name: full_name, label: "Full Name" }
       - { name: email, label: Email }
       - {
@@ -224,4 +272,10 @@ collections:
     editor:
       preview: false
     fields:
+      - {
+          name: "typeKey",
+          label: "Type Key",
+          widget: "hidden",
+          default: "roles",
+        }
       - { name: name, label: Name }

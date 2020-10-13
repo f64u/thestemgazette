@@ -1,4 +1,5 @@
 ---
+typeKey: people
 full_name: Omar Khaled
 email: lskajfd
 roles:
