@@ -8,7 +8,7 @@ backend:
     uploadMedia: "[skip ci] Upload “{{path}}”"
     deleteMedia: "[skip ci] Delete “{{path}}”"
 
-media_folder: content/assets
+media_folder: assets
 public_folder: /assets
 
 collections:
@@ -140,9 +140,10 @@ collections:
           name: author,
           label: Author,
           widget: relation,
-          collection: authors,
-          value_field: authors.*.full_name,
-          search_fields: ["authors.*.full_name", "authors.*.email"],
+          collection: people,
+          value_field: full_name,
+          search_fields: ["full_name", "email"],
+          display_fields: ["full_name", "email"],
         }
       - { name: illustration, label: "Illustration", widget: image }
       - { name: body, label: Body, widget: markdown }
@@ -150,22 +151,16 @@ collections:
 
   # ======================================= </POSTS> =======================================
 
-  - name: aboutus
-    label: "About Us"
-    media_folder: /content/assets/aboutus
-    public_folder: /assets/aboutus
-    files:
-      - name: authors
-        label: Authors
-        file: content/aboutus/authors.json
-        editor:
-          enable_preview: false
-        fields:
-          - name: authors
-            label: authors
-            widget: list
-            allow_add: true
-            fields:
-              - { name: full_name, label: "Full Name" }
-              - { name: email, label: "Email" }
-              - { name: avatar, label: "Avatar", widget: image }
+  - name: people
+    label: People
+    folder: content/people
+    path: "{{full_name}}-{{email}}/index"
+    media_folder: ""
+    public_folder: ""
+    create: true
+    fields:
+      - { name: full_name, label: "Full Name" }
+      - { name: email, label: Email }
+      - { name: role, lable: Role }
+      - { name: bio, label: Bio }
+      - { name: avatar, label: Avatar, widget: image }
