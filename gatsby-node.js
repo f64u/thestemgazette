@@ -31,7 +31,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const posts = result.data.allMarkdownRemark.nodes
 
   if (posts.length > 0) {
-    posts.forEach((post, index) => {
+    posts.forEach((post, _) => {
       createPage({
         path: post.fields.slug,
         component: postTemplate,

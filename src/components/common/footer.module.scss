@@ -1,0 +1,38 @@
+@import "common";
+
+footer {
+  border-top: 1.5px solid #cecece;
+  .container {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0.6rem 0 1.7rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .leftSide {
+    flex-grow: 1;
+  }
+
+  .logo {
+    filter: invert(47%) sepia(88%) saturate(3209%) hue-rotate(168deg)
+      brightness(93%) contrast(102%);
+  }
+
+  .icon {
+    color: $the-blue;
+    font-size: 1.5rem;
+  }
+
+  ul {
+    display: flex;
+    height: 100%;
+    padding: 0;
+    // margin: 0 1.5rem 0 0;
+    li {
+      list-style: none;
+      margin: 0 1.45rem;
+    }
+  }
+}

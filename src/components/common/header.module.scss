@@ -1,0 +1,119 @@
+@import "common";
+
+header {
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .upper {
+    display: flex;
+  }
+
+  .icon {
+    color: $body-text;
+    font-size: 1.3rem;
+  }
+
+  .brand {
+    font-size: 0.92rem;
+  }
+
+  .calendar {
+    font-size: 1.5rem;
+    border-left: 3px solid $body-text;
+    padding-left: 10px;
+    border-radius: 2px;
+  }
+
+  .sides {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    ul {
+      display: flex;
+      width: 100%;
+      padding: 0;
+      .smallItem {
+        list-style: none;
+        margin: 0 0.5rem;
+      }
+    }
+  }
+
+  .leftSide {
+    .utils {
+      margin-right: 0.5rem;
+    }
+  }
+
+  .center {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 2.3rem 0 0.9rem;
+
+    :first-child {
+      font-size: 3.5rem;
+      font-style: normal;
+
+      font-weight: 900;
+    }
+  }
+
+  .rightSide ul {
+    justify-content: flex-end;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 0;
+      li {
+        flex-wrap: wrap;
+
+        list-style: none;
+        text-align: center;
+
+        font-style: italic;
+        font-size: 1rem;
+
+        margin: 0 0.3rem;
+
+        a,
+        a:hover,
+        a:active,
+        a:visited {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        a {
+          text-shadow: 0px -2px 0 white, 0px -1px 0 white, 0px 0px 0 white,
+            2px -2px 0 white, 2px -1px 0 white, 2px 0px 0 white,
+            -2px -2px 0 white, -2px -1px 0 white, -2px 0px 0 white,
+            1px -2px 0 white, 1px -1px 0 white, 1px 0px 0 white,
+            -1px -2px 0 white, -1px -1px 0 white, -1px 0px 0 white,
+            0px -2px 0 white, 0px -1px 0 white, 0px 0px 0 white;
+          box-shadow: 0 -1px 0 0 white inset, 0 -2px 0 0 transparent inset;
+
+          transition: all 0.3s ease-in;
+
+          &:hover {
+            transition: all 0.3s ease-out;
+            box-shadow: 0 -1px 0 0 white inset, 0 -2px 0 0 $body-text inset;
+          }
+        }
+      }
+    }
+  }
+}

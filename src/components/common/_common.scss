@@ -1,0 +1,85 @@
+$header-font: "Oswald", sans-serif;
+$body-font: "Merriweather", sans-serif;
+
+$header-white: #f0f0f0;
+$the-blue: #0098d2;
+$body-text: #28292a;
+
+body {
+  font-family: $body-font;
+  color: $body-text;
+}
+
+@mixin sm {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin scrollHover {
+  transition: overflow-y 0.1s ease 0s;
+  overflow-y: hidden;
+  &:hover {
+    overflow-y: scroll;
+  }
+}
+
+@mixin gt-sm {
+  @media (min-width: 577px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: 577px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin le-md {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin gt-md {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: 769px) and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin le-lg {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin gt-lg {
+  @media (min-width: 993px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: 993px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin le-xl {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin gt-xl {
+  @media (min-width: 1201px) {
+    @content;
+  }
+}
