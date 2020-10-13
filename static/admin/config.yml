@@ -15,17 +15,25 @@ collections:
   # ======================================= <POSTS> =======================================
   - name: news
     label: "News & Announcements"
-    folder: content
+    folder: content/posts/news
     create: true
-    slug: "{{slug}}"
+    slug: "posts/news/{{title}}-{{year}}{{month}}{{day}}"
     media_folder: ""
     public_folder: ""
-    path: "posts/news/{{title}}-{{year}}{{month}}{{day}}/index"
+    path: "{{title}}-{{year}}{{month}}{{day}}/index"
     fields:
       - { name: title, label: Title }
       - { name: date, label: "Publish Date", widget: datetime }
       - { name: description, label: Description }
-      - { name: author, label: Author }
+      - {
+          name: author,
+          label: Author,
+          widget: relation,
+          collection: people,
+          value_field: email,
+          search_fields: ["full_name"],
+          display_fields: ["{{full_name}} - {{email}}"],
+        }
       - { name: illustration, label: "Illustration", widget: image }
       - { name: body, label: Body, widget: markdown }
       - name: category
@@ -38,65 +46,97 @@ collections:
 
   - name: events
     label: "Events"
-    folder: content
+    folder: content/posts/events
     create: true
-    slug: "{{slug}}"
+    slug: "posts/events/{{title}}-{{year}}{{month}}{{day}}"
     media_folder: ""
     public_folder: ""
-    path: "posts/events/{{title}}-{{year}}{{month}}{{day}}/index"
+    path: "{{title}}-{{year}}{{month}}{{day}}/index"
     fields:
       - { name: title, label: Title }
       - { name: date, label: "Publish Date", widget: datetime }
       - { name: description, label: Description }
-      - { name: author, label: Author }
+      - {
+          name: author,
+          label: Author,
+          widget: relation,
+          collection: people,
+          value_field: email,
+          search_fields: ["full_name"],
+          display_fields: ["{{full_name}} - {{email}}"],
+        }
       - { name: illustration, label: "Illustration", widget: image }
       - { name: body, label: Body, widget: markdown }
 
   - name: awards
     label: "Awards & Honors"
-    folder: content
+    folder: content/posts/awards
     create: true
-    slug: "{{slug}}"
+    slug: "posts/awards/{{title}}-{{year}}{{month}}{{day}}"
     media_folder: ""
     public_folder: ""
-    path: "posts/awards/{{title}}-{{year}}{{month}}{{day}}/index"
+    path: "{{title}}-{{year}}{{month}}{{day}}/index"
     fields:
       - { name: title, label: Title }
       - { name: date, label: "Publish Date", widget: datetime }
       - { name: description, label: Description }
-      - { name: author, label: Author }
+      - {
+          name: author,
+          label: Author,
+          widget: relation,
+          collection: people,
+          value_field: email,
+          search_fields: ["full_name"],
+          display_fields: ["{{full_name}} - {{email}}"],
+        }
       - { name: illustration, label: "Illustration", widget: image }
       - { name: body, label: Body, widget: markdown }
 
   - name: exchange
     label: "Exchange Programs"
-    folder: content
+    folder: content/posts/exchange
     create: true
-    slug: "{{slug}}"
+    slug: "posts/exchange/{{title}}-{{year}}{{month}}{{day}}"
     media_folder: ""
     public_folder: ""
-    path: "posts/exchange/{{title}}-{{year}}{{month}}{{day}}/index"
+    path: "{{title}}-{{year}}{{month}}{{day}}/index"
     fields:
       - { name: title, label: Title }
       - { name: date, label: "Publish Date", widget: datetime }
       - { name: description, label: Description }
-      - { name: author, label: Author }
+      - {
+          name: author,
+          label: Author,
+          widget: relation,
+          collection: people,
+          value_field: email,
+          search_fields: ["full_name"],
+          display_fields: ["{{full_name}} - {{email}}"],
+        }
       - { name: illustration, label: "Illustration", widget: image }
       - { name: body, label: Body, widget: markdown }
 
   - name: admissions
     label: "International College Admissions"
-    folder: content
+    folder: content/posts/admissions
     create: true
-    slug: "{{slug}}"
+    slug: "posts/admissions/{{title}}-{{year}}{{month}}{{day}}"
     media_folder: ""
     public_folder: ""
-    path: "posts/admissions/{{title}}-{{year}}{{month}}{{day}}/index"
+    path: "{{title}}-{{year}}{{month}}{{day}}/index"
     fields:
       - { name: title, label: Title }
       - { name: date, label: "Publish Date", widget: datetime }
       - { name: description, label: Description }
-      - { name: author, label: Author }
+      - {
+          name: author,
+          label: Author,
+          widget: relation,
+          collection: people,
+          value_field: email,
+          search_fields: ["full_name"],
+          display_fields: ["{{full_name}} - {{email}}"],
+        }
       - { name: illustration, label: "Illustration", widget: image }
       - { name: body, label: Body, widget: markdown }
       - name: category
@@ -110,28 +150,12 @@ collections:
 
   - name: domestic
     label: "Grade 12 Domestic Ranks & College Coordination"
-    folder: content
+    folder: content/posts/domestic
     create: true
-    slug: "{{slug}}"
+    slug: "posts/domestic/{{title}}-{{year}}{{month}}{{day}}"
     media_folder: ""
     public_folder: ""
-    path: "posts/domestic/{{title}}-{{year}}{{month}}{{day}}/index"
-    fields:
-      - { name: title, label: Title }
-      - { name: date, label: "Publish Date", widget: datetime }
-      - { name: description, label: Description }
-      - { name: author, label: Author }
-      - { name: illustration, label: "Illustration", widget: image }
-      - { name: body, label: Body, widget: markdown }
-
-  - name: student_submissions
-    label: "Student Submissions"
-    folder: content
-    create: true
-    slug: "{{slug}}"
-    media_folder: ""
-    public_folder: ""
-    path: "posts/student-submissions/{{title}}-{{year}}{{month}}{{day}}/index"
+    path: "{{title}}-{{year}}{{month}}{{day}}/index"
     fields:
       - { name: title, label: Title }
       - { name: date, label: "Publish Date", widget: datetime }
@@ -141,10 +165,26 @@ collections:
           label: Author,
           widget: relation,
           collection: people,
-          value_field: full_name,
-          search_fields: ["full_name", "email"],
-          display_fields: ["full_name", "email"],
+          value_field: email,
+          search_fields: ["full_name"],
+          display_fields: ["{{full_name}} - {{email}}"],
         }
+      - { name: illustration, label: "Illustration", widget: image }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: student_submissions
+    label: "Student Submissions"
+    folder: content/posts/student-submissions
+    create: true
+    slug: "posts/student-submissions/{{title}}-{{year}}{{month}}{{day}}"
+    media_folder: ""
+    public_folder: ""
+    path: "{{title}}-{{year}}{{month}}{{day}}/index"
+    fields:
+      - { name: title, label: Title }
+      - { name: date, label: "Publish Date", widget: datetime }
+      - { name: description, label: Description }
+      - { name: author, label: Author }
       - { name: illustration, label: "Illustration", widget: image }
       - { name: body, label: Body, widget: markdown }
       - { name: tags, label: Tags, widget: list }
@@ -158,6 +198,8 @@ collections:
     media_folder: ""
     public_folder: ""
     create: true
+    editor:
+      preview: false
     fields:
       - { name: full_name, label: "Full Name" }
       - { name: email, label: Email }
