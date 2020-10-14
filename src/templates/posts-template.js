@@ -1,24 +1,35 @@
-import React, { useContext } from "react"
+import React from "react"
 import Img from "gatsby-image"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+
+import Layout from "../components/common/layout"
+import styles from "./posts-template.module.scss"
 
 const PostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
+  const author = pageContext.author
 
   return (
-    <article>
-      <header>
-        <h1>{post.frontmatter.title}</h1>
-        <p>{post.frontmatter.date}</p>
-      </header>
-      <Img
-        fluid={post.frontmatter.illustration.childImageSharp.fluid}
-        alt={post.frontmatter.title}
-      />
-      <span>--</span>
-      <span>{post.frontmatter.description}</span>{" "}
-    </article>
+    <Layout>
+      <div className={styles.container}>
+        <article className={styles.article}>
+          <header>
+            <h1>{post.frontmatter.title}</h1>
+            <p className={styles.date}>DATE {post.frontmatter.date}</p>
+          </header>
+          <Img
+            fluid={post.frontmatter.illustration.childImageSharp.fluid}
+            alt={post.frontmatter.title}
+          />
+          <section
+            dangerouslySetInnerHTML={{ __html: post.html }}
+            itemProp="articleBody"
+          />
+          <div className={styles.author}>-{author.name}</div>
+        </article>
+      </div>
+    </Layout>
   )
 }
 
@@ -32,8 +43,9 @@ export const pageQuery = graphql`
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD.MM.YY")
         description
         title
         illustration {

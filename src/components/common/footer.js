@@ -3,7 +3,7 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import styles from "./footer.module.scss"
-import logo from "../../../assets/logo.svg"
+import logo from "../../../static/logo.svg"
 
 const Footer = () => {
   return (

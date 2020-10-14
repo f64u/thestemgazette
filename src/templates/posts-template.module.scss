@@ -1,0 +1,58 @@
+@import "../components/common/common";
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.article {
+  padding: 5rem 3rem;
+
+  border-left: 0.65rem solid $the-gray;
+  border-bottom: 0.65rem solid $the-gray;
+  border-right: 0.2rem solid $the-gray;
+  border-top: 0.2rem solid $the-gray;
+
+  border-radius: 5px;
+
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .date {
+    color: #b8b8b8;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  .author {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  p {
+    line-height: 1.9rem;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    line-height: 1.9rem;
+  }
+
+  img {
+    width: 80vw;
+  }
+
+  a {
+    color: $the-blue;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}

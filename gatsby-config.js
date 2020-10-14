@@ -35,10 +35,13 @@ module.exports = {
         path: `${__dirname}/content/roles`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-relative-images`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -51,16 +54,9 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/assets`,
-        name: `assets`,
-      },
-    },
+
     `gatsby-plugin-netlify-cms`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-fontawesome-css`,

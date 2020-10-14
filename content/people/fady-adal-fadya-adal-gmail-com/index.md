@@ -7,5 +7,5 @@ roles:
   - Author
   - Website Manager
 bio: The Person
-avatar: mustacheparrot.gif
+avatar: fadyavatar.png
 ---

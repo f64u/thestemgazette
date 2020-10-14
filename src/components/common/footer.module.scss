@@ -1,7 +1,8 @@
 @import "common";
 
 footer {
-  border-top: 1.5px solid #cecece;
+  border-top: 1.5px solid $the-gray;
+  margin-top: 3rem;
   .container {
     width: 95%;
     height: 100%;
