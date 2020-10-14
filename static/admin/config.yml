@@ -17,10 +17,10 @@ collections:
     label: "News & Announcements"
     folder: content/posts/news
     create: true
-    slug: "posts/news/{{title}}-{{year}}{{month}}{{day}}"
+    slug: "posts/news/{{title}}-{{date}}"
     media_folder: ""
     public_folder: ""
-    path: "{{title}}-{{year}}{{month}}{{day}}/index"
+    path: "{{title}}-{{date}}/index"
     fields:
       - {
           name: "typeKey",
@@ -29,7 +29,12 @@ collections:
           default: "posts",
         }
       - { name: title, label: Title }
-      - { name: date, label: "Publish Date", widget: datetime }
+      - {
+          name: date,
+          label: "Publish Date",
+          widget: datetime,
+          format: "YYYYMMDD",
+        }
       - { name: description, label: Description }
       - {
           name: author,
@@ -54,10 +59,10 @@ collections:
     label: "Events"
     folder: content/posts/events
     create: true
-    slug: "posts/events/{{title}}-{{year}}{{month}}{{day}}"
+    slug: "posts/events/{{title}}-{{date}}"
     media_folder: ""
     public_folder: ""
-    path: "{{title}}-{{year}}{{month}}{{day}}/index"
+    path: "{{title}}-{{date}}/index"
     fields:
       - {
           name: "typeKey",
@@ -67,7 +72,12 @@ collections:
         }
       - { name: title, label: Title }
       - { name: date, label: "Publish Date", widget: datetime }
-      - { name: description, label: Description }
+      - {
+          name: date,
+          label: "Publish Date",
+          widget: datetime,
+          format: "YYYYMMDD",
+        }
       - {
           name: author,
           label: Author,
@@ -84,10 +94,10 @@ collections:
     label: "Awards & Honors"
     folder: content/posts/awards
     create: true
-    slug: "posts/awards/{{title}}-{{year}}{{month}}{{day}}"
+    slug: "posts/awards/{{title}}-{{date}}"
     media_folder: ""
     public_folder: ""
-    path: "{{title}}-{{year}}{{month}}{{day}}/index"
+    path: "{{title}}-{{date}}/index"
     fields:
       - {
           name: "typeKey",
@@ -96,7 +106,12 @@ collections:
           default: "posts",
         }
       - { name: title, label: Title }
-      - { name: date, label: "Publish Date", widget: datetime }
+      - {
+          name: date,
+          label: "Publish Date",
+          widget: datetime,
+          format: "YYYYMMDD",
+        }
       - { name: description, label: Description }
       - {
           name: author,
@@ -114,10 +129,10 @@ collections:
     label: "Exchange Programs"
     folder: content/posts/exchange
     create: true
-    slug: "posts/exchange/{{title}}-{{year}}{{month}}{{day}}"
+    slug: "posts/exchange/{{date}}"
     media_folder: ""
     public_folder: ""
-    path: "{{title}}-{{year}}{{month}}{{day}}/index"
+    path: "{{title}}-{{date}}/index"
     fields:
       - {
           name: "typeKey",
@@ -126,7 +141,12 @@ collections:
           default: "posts",
         }
       - { name: title, label: Title }
-      - { name: date, label: "Publish Date", widget: datetime }
+      - {
+          name: date,
+          label: "Publish Date",
+          widget: datetime,
+          format: "YYYYMMDD",
+        }
       - { name: description, label: Description }
       - {
           name: author,
@@ -144,10 +164,10 @@ collections:
     label: "International College Admissions"
     folder: content/posts/admissions
     create: true
-    slug: "posts/admissions/{{title}}-{{year}}{{month}}{{day}}"
+    slug: "posts/admissions/{{title}}-{{date}}"
     media_folder: ""
     public_folder: ""
-    path: "{{title}}-{{year}}{{month}}{{day}}/index"
+    path: "{{title}}-{{date}}/index"
     fields:
       - {
           name: "typeKey",
@@ -156,7 +176,12 @@ collections:
           default: "posts",
         }
       - { name: title, label: Title }
-      - { name: date, label: "Publish Date", widget: datetime }
+      - {
+          name: date,
+          label: "Publish Date",
+          widget: datetime,
+          format: "YYYYMMDD",
+        }
       - { name: description, label: Description }
       - {
           name: author,
@@ -182,10 +207,10 @@ collections:
     label: "Grade 12 Domestic Ranks & College Coordination"
     folder: content/posts/domestic
     create: true
-    slug: "posts/domestic/{{title}}-{{year}}{{month}}{{day}}"
+    slug: "posts/domestic/{{title}}-{{date}}"
     media_folder: ""
     public_folder: ""
-    path: "{{title}}-{{year}}{{month}}{{day}}/index"
+    path: "{{title}}-{{date}}/index"
     fields:
       - {
           name: "typeKey",
@@ -194,7 +219,12 @@ collections:
           default: "posts",
         }
       - { name: title, label: Title }
-      - { name: date, label: "Publish Date", widget: datetime }
+      - {
+          name: date,
+          label: "Publish Date",
+          widget: datetime,
+          format: "YYYYMMDD",
+        }
       - { name: description, label: Description }
       - {
           name: author,
@@ -212,10 +242,10 @@ collections:
     label: "Student Submissions"
     folder: content/posts/student-submissions
     create: true
-    slug: "posts/student-submissions/{{title}}-{{year}}{{month}}{{day}}"
+    slug: "posts/student-submissions/{{title}}-{{date}}"
     media_folder: ""
     public_folder: ""
-    path: "{{title}}-{{year}}{{month}}{{day}}/index"
+    path: "{{title}}-{{date}}/index"
     fields:
       - {
           name: "typeKey",
@@ -224,7 +254,12 @@ collections:
           default: "posts",
         }
       - { name: title, label: Title }
-      - { name: date, label: "Publish Date", widget: datetime }
+      - {
+          name: date,
+          label: "Publish Date",
+          widget: datetime,
+          format: "YYYYMMDD",
+        }
       - { name: description, label: Description }
       - { name: author, label: Author }
       - { name: illustration, label: "Illustration", widget: image }

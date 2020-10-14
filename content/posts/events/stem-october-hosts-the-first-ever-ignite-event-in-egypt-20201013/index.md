@@ -1,7 +1,7 @@
 ---
 typeKey: posts
 title: STEM October hosts the first ever Ignite event in Egypt
-date: 2020-08-15T21:31:40.150Z
+date: "20200815"
 description: The first Ignite event hosted in Egypt is hosted by STEM October.
 author: 18047@stemegypt.edu.eg
 illustration: ignite.png

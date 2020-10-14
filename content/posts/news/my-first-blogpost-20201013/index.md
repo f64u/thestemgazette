@@ -1,7 +1,7 @@
 ---
 typeKey: posts
 title: My First Blogpost
-date: 2020-10-13T10:04:49.431Z
+date: "20201013"
 description: asdfaaf
 author: fadya.adal@gmail.com
 illustration: image-1-.jpg
