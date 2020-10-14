@@ -1,4 +1,4 @@
 ---
 typeKey: roles
-name: Data Collector
+name: Editor-in-Chief
 ---
