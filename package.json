@@ -3,7 +3,7 @@
   "private": true,
   "description": "The STEM Gazette",
   "version": "0.1.0",
-  "license": "0BSD",
+  "license": "GPLv3",
   "scripts": {
     "build": "env-cmd -f .env.development gatsby build --log-pages",
     "develop": "env-cmd -f .env.development gatsby develop",
