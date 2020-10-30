@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 
-import { library } from "@fortawesome/fontawesome-svg-core"
+import { library } from "@fortawesome/fontawesome-svg-core";
 
 import {
   faFacebookF,
@@ -8,12 +8,12 @@ import {
   faInstagram,
   faInstagramSquare,
   faLinkedinIn,
-} from "@fortawesome/free-brands-svg-icons"
-import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons"
-import { faCalendarAlt } from "@fortawesome/free-regular-svg-icons"
-import Header from "./header"
-import Footer from "./footer"
-import styles from "./layout.module.scss"
+} from "@fortawesome/free-brands-svg-icons";
+import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarAlt } from "@fortawesome/free-regular-svg-icons";
+import Header from "./header";
+import Footer from "./footer";
+import styles from "./layout.module.scss";
 
 library.add(
   faFacebookF,
@@ -24,7 +24,7 @@ library.add(
   faSearch,
   faBars,
   faCalendarAlt
-)
+);
 
 const Layout = ({ children }) => {
   return (
@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
       </div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

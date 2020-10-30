@@ -1,9 +1,9 @@
-import React from "react"
+import React from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Search = () => {
-  return <FontAwesomeIcon icon="search" />
-}
+  return <FontAwesomeIcon icon="search" />;
+};
 
-export default Search
+export default Search;

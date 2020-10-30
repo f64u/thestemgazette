@@ -1,5 +1,5 @@
-import "typeface-merriweather"
+import "typeface-merriweather";
 
-import "./src/normalize.css"
+import "./src/normalize.css";
 
-import "prismjs/themes/prism-dark.css"
+import "prismjs/themes/prism-dark.css";

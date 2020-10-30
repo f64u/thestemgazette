@@ -1,11 +1,11 @@
-const path = require('path');
+const path = require("path");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-	const { createPage } = actions;
-	const postTemplate = path.resolve(`./src/templates/posts-template.js`);
+  const { createPage } = actions;
+  const postTemplate = path.resolve(`./src/templates/posts-template.js`);
 
-	const posts_results = await graphql(`
+  const posts_results = await graphql(`
     {
       allMarkdownRemark(
         filter: { frontmatter: { typeKey: { eq: "posts" } } }
@@ -24,12 +24,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `);
 
-	if (posts_results.errors) {
-		reporter.panicOnBuild(`There was an error loading posts`, posts_results.errors);
-		return;
-	}
+  if (posts_results.errors) {
+    reporter.panicOnBuild(
+      `There was an error loading posts`,
+      posts_results.errors
+    );
+    return;
+  }
 
-	const people_results = await graphql(`
+  const people_results = await graphql(`
     {
       allMarkdownRemark(
         filter: { frontmatter: { typeKey: { eq: "people" } } }
@@ -55,45 +58,51 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `);
 
-	if (people_results.errors) {
-		reporter.panicOnBuild(`There was an error loading posts`, people_results.errors);
-		return;
-	}
+  if (people_results.errors) {
+    reporter.panicOnBuild(
+      `There was an error loading posts`,
+      people_results.errors
+    );
+    return;
+  }
 
-	const people = {};
-	people_results.data.allMarkdownRemark.nodes.forEach((person, _) => {
-		people[person.frontmatter.email] = {
-			name: person.frontmatter.full_name,
-			email: person.frontmatter.email,
-			avatar: person.frontmatter.avatar
-		};
-	});
+  const people = {};
+  people_results.data.allMarkdownRemark.nodes.forEach((person, _) => {
+    people[person.frontmatter.email] = {
+      name: person.frontmatter.full_name,
+      email: person.frontmatter.email,
+      avatar: person.frontmatter.avatar,
+    };
+  });
 
-	const posts = posts_results.data.allMarkdownRemark.nodes;
+  const posts = posts_results.data.allMarkdownRemark.nodes;
 
-	if (posts.length > 0) {
-		posts.forEach((post, _) => {
-			createPage({
-				path: post.fields.slug,
-				component: postTemplate,
-				context: {
-					slug: post.fields.slug,
-					author: people[post.frontmatter.author]
-				}
-			});
-		});
-	}
+  if (posts.length > 0) {
+    posts.forEach((post, _) => {
+      createPage({
+        path: post.fields.slug,
+        component: postTemplate,
+        context: {
+          slug: post.fields.slug,
+          author: people[post.frontmatter.author],
+        },
+      });
+    });
+  }
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-	const { createNodeField } = actions;
+  const { createNodeField } = actions;
 
-	if (node.internal.type === `MarkdownRemark` && node.frontmatter.typeKey === `posts`) {
-		const value = createFilePath({ node, getNode, basePath: `content/posts` });
-		createNodeField({
-			node,
-			name: `slug`,
-			value: `/posts${value}`
-		});
-	}
+  if (
+    node.internal.type === `MarkdownRemark` &&
+    node.frontmatter.typeKey === `posts`
+  ) {
+    const value = createFilePath({ node, getNode, basePath: `content/posts` });
+    createNodeField({
+      node,
+      name: `slug`,
+      value: `/posts${value}`,
+    });
+  }
 };

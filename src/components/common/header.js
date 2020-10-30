@@ -1,14 +1,14 @@
-import React from "react"
+import React from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Search from "./search"
+import Search from "./search";
 
-import styles from "./header.module.scss"
+import styles from "./header.module.scss";
 
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 
-console.log(styles)
+console.log(styles);
 
 const Header = () => {
   return (
@@ -103,7 +103,7 @@ const Header = () => {
         </nav>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -1,9 +1,9 @@
-import React from "react"
+import React from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import styles from "./footer.module.scss"
-import logo from "../../../static/logo.svg"
+import styles from "./footer.module.scss";
+import logo from "../../../static/logo.svg";
 
 const Footer = () => {
   return (
@@ -56,7 +56,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
