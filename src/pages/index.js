@@ -1,13 +1,15 @@
-import React from "react"
+import React from 'react';
 
-import Layout from "../components/common/layout"
+import Layout from '../components/common/layout';
+import SEO from '../components/common/seo';
 
 const Home = () => {
-  return (
-    <Layout>
-      <div>Hello world!</div>
-    </Layout>
-  )
-}
+	return (
+		<Layout>
+			<SEO />
+			<div>Hello world!</div>
+		</Layout>
+	);
+};
 
-export default Home
+export default Home;
