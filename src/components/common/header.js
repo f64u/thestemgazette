@@ -8,8 +8,6 @@ import styles from "./header.module.scss";
 
 import { Link } from "gatsby";
 
-console.log(styles);
-
 const Header = () => {
   return (
     <header>

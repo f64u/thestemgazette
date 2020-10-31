@@ -1,7 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import React from "react";
+import { Helmet } from "react-helmet";
 
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from "gatsby";
 
 const SEO = ({ description, keywords, title, image, url, author }) => {
   const {
@@ -22,10 +22,7 @@ const SEO = ({ description, keywords, title, image, url, author }) => {
           title
           url
           description
-          author {
-            name
-            summary
-          }
+          author
           image
           keywords
         }
@@ -38,7 +35,7 @@ const SEO = ({ description, keywords, title, image, url, author }) => {
   url = url || urlMeta;
   image = image || imageMeta;
   author = author || authorMeta;
-  description = keywords || keywordsMeta;
+  keywords = keywords || keywordsMeta;
 
   return (
     <Helmet
@@ -74,7 +71,7 @@ const SEO = ({ description, keywords, title, image, url, author }) => {
         },
         {
           name: `twitter:creator`,
-          content: author.name,
+          content: author,
         },
         {
           name: `twitter:title`,
@@ -90,13 +87,17 @@ const SEO = ({ description, keywords, title, image, url, author }) => {
         },
       ].concat(
         keywords && keywords.length > 0
-          ? {
-              name: `keywords`,
-              content: keywords.join(', '),
-            }
+          ? [
+              {
+                name: `keywords`,
+                content: keywords.join(", "),
+              },
+            ]
           : []
       )}
-    />
+    >
+      <link rel="canonical" href={url} />
+    </Helmet>
   );
 };
 

@@ -15,7 +15,7 @@ const PostTemplate = ({ data, pageContext, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.excerpt}
-        author={{ name: author.name }}
+        author={author.name}
         url={location.pathname}
         image={post.frontmatter.illustration.publicURL}
       />

@@ -7,16 +7,14 @@
 module.exports = {
   siteMetadata: {
     title: "The STEM Gazette",
-    author: {
-      name: "STEM Egypt High School for Boys",
-      summary: "One of the best schools from all over Egypt.",
-    },
+    author: "The STEM Gazette Team",
     description: `All the news happening within the STEM October campus.`,
-    url: "https://gazette.stemegypt.net",
+    url: "https://thestemegypt.netlify.app",
     image: `${__dirname}/static/logo.svg`,
     keywords: [
       "The STEM Gazette",
       "STEM October",
+      "The STEM Egypt Gazzette",
       "STEM Egypt High School for Boys",
       "STEM High School for Boys",
       "STEM Egypt",
