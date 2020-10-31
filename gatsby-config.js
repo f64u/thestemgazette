@@ -1,16 +1,10 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
   siteMetadata: {
     title: "The STEM Gazette",
     author: "The STEM Gazette Team",
     description: `All the news happening within the STEM October campus.`,
     siteUrl: "https://thestemegypt.netlify.app",
-    image: `${__dirname}/static/gazette_logo.png`,
+    image: `/gazette_logo.png`,
     keywords: [
       "The STEM Gazette",
       "STEM October",
