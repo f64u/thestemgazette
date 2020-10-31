@@ -20,7 +20,7 @@
 </div>
 
 <div align="center"  style="margin-bottom:30px">
-    <img src="static/gazette_logo.png" alt="Logo"/>
+    <img src="static/gazette_logo.png" alt="Logo" width="750px"/>
 </div>
 
 <div align="center" style="margin-bottom:30px">
