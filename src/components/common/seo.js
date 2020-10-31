@@ -8,7 +8,7 @@ const SEO = ({ description, keywords, title, image, url, author }) => {
     site: {
       siteMetadata: {
         title: titleMeta,
-        url: urlMeta,
+        siteUrl: urlMeta,
         description: descriptionMeta,
         image: imageMeta,
         author: authorMeta,
@@ -20,7 +20,7 @@ const SEO = ({ description, keywords, title, image, url, author }) => {
       site {
         siteMetadata {
           title
-          url
+          siteUrl
           description
           author
           image

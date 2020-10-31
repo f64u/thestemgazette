@@ -9,7 +9,7 @@ module.exports = {
     title: "The STEM Gazette",
     author: "The STEM Gazette Team",
     description: `All the news happening within the STEM October campus.`,
-    url: "https://thestemegypt.netlify.app",
+    siteUrl: "https://thestemegypt.netlify.app",
     image: `${__dirname}/static/logo.svg`,
     keywords: [
       "The STEM Gazette",
