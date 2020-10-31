@@ -6,7 +6,7 @@
 
 <div align="center" style="margin-bottom:30px">
     <a href='https://github.com/fadyadal/stemgazette/blob/master/LICENSE'>
-    <img src="https://img.shields.io/github/license/fadyadal/stemgazetter.svg" alt="Logo" />
+    <img src="https://img.shields.io/github/license/fadyadal/stemgazette.svg" alt="Logo" />
     </a>
     <a href='https://github.com/fadyadal/stemgazette'>
     <img src="https://img.shields.io/github/tag/fadyadal/stemgazette.svg" alt="Logo" />
