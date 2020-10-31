@@ -5,11 +5,11 @@
 </div>
 
 <div align="center" style="margin-bottom:30px">
-    <a href='https://github.com/fadyadal/stemgazette/blob/master/LICENSE'>
+    <a href='https://github.com/fadyadal/stemgazette/blob/main/LICENSE'>
     <img src="https://img.shields.io/github/license/fadyadal/stemgazette.svg" alt="Logo" />
     </a>
     <a href='https://github.com/fadyadal/stemgazette'>
-    <img src="https://img.shields.io/github/tag/fadyadal/stemgazette.svg" alt="Logo" />
+    <img src="https://img.shields.io/github/v/tag/fadyadal/stemgazette.svg" alt="Logo" />
     </a>
         <a href='https://github.com/fadyadal/stemgazette/stargazers'>
     <img src="https://img.shields.io/github/stars/fadyadal/stemgazette.svg" alt="Logo" />
