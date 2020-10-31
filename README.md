@@ -20,10 +20,10 @@
 </div>
 
 <div align="center"  style="margin-bottom:30px">
-    <img src="static/gazette_logo.png" alt="Logo" width='200px' height='200px'/>
+    <img src="static/gazette_logo.png" alt="Logo"/>
 </div>
 
-<div align="center">
+<div align="center" style="margin-bottom:30px">
     <a href="https://codeclimate.com/github/fadyadal/stemgazette">
       <img src="https://codeclimate.com/github/fadyadal/stemgazette.svg" alt="Logo" />
     </a>
@@ -37,6 +37,7 @@
       <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="Logo" />
     </a>
 </div>
+
 # 📰 The STEM Gazette
 
 The source code and content of the new STEM Gazette
