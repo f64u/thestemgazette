@@ -5,17 +5,17 @@
 </div>
 
 <div align="center" style="margin-bottom:30px">
-    <a href='https://github.com/fadyadal/stemgazette/blob/main/LICENSE'>
-    <img src="https://img.shields.io/github/license/fadyadal/stemgazette.svg" alt="Logo" />
+    <a href='https://github.com/fadyadal/thestemgazette/blob/main/LICENSE'>
+    <img src="https://img.shields.io/github/license/fadyadal/thestemgazette.svg" alt="Logo" />
     </a>
-    <a href='https://github.com/fadyadal/stemgazette'>
-    <img src="https://img.shields.io/github/v/tag/fadyadal/stemgazette.svg" alt="Logo" />
+    <a href='https://github.com/fadyadal/thestemgazette'>
+    <img src="https://img.shields.io/github/v/tag/fadyadal/thestemgazette.svg" alt="Logo" />
     </a>
-        <a href='https://github.com/fadyadal/stemgazette/stargazers'>
-    <img src="https://img.shields.io/github/stars/fadyadal/stemgazette.svg" alt="Logo" />
+        <a href='https://github.com/fadyadal/thestemgazette/stargazers'>
+    <img src="https://img.shields.io/github/stars/fadyadal/thestemgazette.svg" alt="Logo" />
     </a>
-        <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20cool%20project%3A&url=https%3A%2F%2Fgithub.com%2Ffadyadal%2Fstemgazette">
-    <img src="https://img.shields.io/twitter/url/https/github.com/fadyadal/stemgazette.svg?style=social" alt="Logo" />
+        <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20cool%20project%3A&url=https%3A%2F%2Fgithub.com%2Ffadyadal%2Fthestemgazette">
+    <img src="https://img.shields.io/twitter/url/https/github.com/fadyadal/thestemgazette.svg?style=social" alt="Logo" />
     </a>
 </div>
 
@@ -24,13 +24,13 @@
 </div>
 
 <div align="center" style="margin-bottom:30px">
-    <a href="https://codeclimate.com/github/fadyadal/stemgazette">
-      <img src="https://codeclimate.com/github/fadyadal/stemgazette.svg" alt="Logo" />
+    <a href="https://codeclimate.com/github/fadyadal/thestemgazette">
+      <img src="https://codeclimate.com/github/fadyadal/thestemgazette.svg" alt="Logo" />
     </a>
-    <a href='https://codeclimate.com/github/fadyadal/stemgazette'>
-      <img src="https://codeclimate.com/github/fadyadal/stemgazette/badges/issue_count.svg" alt="Logo" />
+    <a href='https://codeclimate.com/github/fadyadal/thestemgazette'>
+      <img src="https://codeclimate.com/github/fadyadal/thestemgazette/badges/issue_count.svg" alt="Logo" />
     </a>
-    <a href="https://www.codacy.com/gh/fadyadal/stemgazette/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fadyadal/stemgazette&amp;utm_campaign=Badge_Grade">
+    <a href="https://www.codacy.com/gh/fadyadal/thestemgazette/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fadyadal/thestemgazette&amp;utm_campaign=Badge_Grade">
         <img src="https://app.codacy.com/project/badge/Grade/97765835d34643a5b4f49cc226578904"/>
     </a>
     <a href='https://github.com/prettier/prettier'>

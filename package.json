@@ -1,5 +1,5 @@
 {
-  "name": "stemgazette",
+  "name": "thestemgazette",
   "private": true,
   "description": "The STEM Gazette",
   "version": "0.1.0",
@@ -51,9 +51,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fadyadal/stemgazette"
+    "url": "https://github.com/fadyadal/thestemgazette"
   },
   "bugs": {
-    "url": "https://github.com/fadyadal/stemgazette/issues"
+    "url": "https://github.com/fadyadal/thestemgazette/issues"
   }
 }
