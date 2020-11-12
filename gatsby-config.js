@@ -62,6 +62,18 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `The STEM Gazette`,
+        short_name: `STEM Gazette`,
+        start_url: `/`,
+        background_color: `#e9e9e9`,
+        theme_color: `#0098d2`,
+        display: `standalone`,
+        icon: `static/gazette_logo.png`,
+      },
+    },
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
