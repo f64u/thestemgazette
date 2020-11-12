@@ -8,7 +8,8 @@ module.exports = {
     keywords: [
       "The STEM Gazette",
       "STEM October",
-      "The STEM Egypt Gazzette",
+      "STEM Gazette",
+      "The STEM Egypt Gazette",
       "STEM Egypt High School for Boys",
       "STEM High School for Boys",
       "STEM Egypt",
@@ -53,6 +54,7 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-remark-external-links`,
         ],
       },
     },
