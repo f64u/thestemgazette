@@ -5,7 +5,7 @@ date: "20201014"
 description: Ahmed Abdelmegeed, one of our shiny students, especially in
   Mathematics, was offered a space at one of the most prestigious summer
   programs worldwide, Canada/USA MathCamp.
-author: fadya.adal@gmail.com
+author: 18047@stemegypt.edu.eg
 illustration: jaheen.png
 ---
 
