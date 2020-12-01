@@ -1,10 +1,11 @@
 const config = require("./data/SiteConfig");
+const urljoin = require("url-join");
 
 const validatedPathPrefix = config.pathPrefix === "" ? "/" : config.pathPrefix;
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://thestemgazette.netlify.app",
+    siteUrl: urljoin(config.siteUrl, config.pathPrefix),
     image: config.siteLogo,
   },
   plugins: [
