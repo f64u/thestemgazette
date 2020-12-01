@@ -3,7 +3,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styles from "./footer.module.scss";
-import logo from "../../../static/logo.svg";
+import logo from "../../../static/logos/stem_logo.svg";
 
 const Footer = () => {
   return (

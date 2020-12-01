@@ -1,19 +1,11 @@
+const config = require("./data/SiteConfig");
+
+const validatedPathPrefix = config.pathPrefix === "" ? "/" : config.pathPrefix;
+
 module.exports = {
   siteMetadata: {
-    title: "The STEM Gazette",
-    author: "The STEM Gazette Team",
-    description: `All the news happening within the STEM October campus.`,
     siteUrl: "https://thestemgazette.netlify.app",
-    image: `/gazette_logo.png`,
-    keywords: [
-      "The STEM Gazette",
-      "STEM October",
-      "STEM Gazette",
-      "The STEM Egypt Gazette",
-      "STEM Egypt High School for Boys",
-      "STEM High School for Boys",
-      "STEM Egypt",
-    ],
+    image: config.siteLogo,
   },
   plugins: [
     {
@@ -65,13 +57,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `The STEM Gazette`,
-        short_name: `STEM Gazette`,
-        start_url: `/`,
-        background_color: `#e9e9e9`,
-        theme_color: `#0098d2`,
-        display: `standalone`,
-        icon: `static/gazette_logo.png`,
+        name: config.siteTitle,
+        short_name: config.siteTitleShort,
+        description: config.description,
+        start_url: validatedPathPrefix,
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
+        display: `minimal-ui`,
+        icon: `static${config.siteLogo}`,
       },
     },
     `gatsby-plugin-fontawesome-css`,

@@ -6,31 +6,43 @@ import Layout from "../components/common/layout";
 import SEO from "../components/common/seo";
 import styles from "./posts-template.module.scss";
 
-const PostTemplate = ({ data, pageContext, location }) => {
-  const post = data.markdownRemark;
-  const author = pageContext.author;
+import { parse, format } from "date-fns";
+
+import config from "../../data/SiteConfig";
+import { Helmet } from "react-helmet";
+const PostTemplate = ({ data, pageContext }) => {
+  const postNode = data.markdownRemark;
+  const post = postNode.frontmatter;
+  const { slug, author } = pageContext;
+
+  if (!post.id) {
+    post.id = slug;
+  }
 
   return (
     <Layout>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.excerpt}
-        author={author.name}
-        url={location.pathname}
-        image={post.frontmatter.illustration.publicURL}
-      />
+      <Helmet>
+        <title>{`${post.title} | ${config.siteTitle}`}</title>
+      </Helmet>
+      <SEO postPath={slug} postNode={postNode} postAuthor={author} postSEO />
       <div className={styles.container}>
         <article className={styles.article}>
           <header>
-            <h1>{post.frontmatter.title}</h1>
-            <p className={styles.date}>DATE {post.frontmatter.date}</p>
+            <h1>{post.title}</h1>
+            <p className={styles.date}>
+              DATE{" "}
+              {format(
+                parse(post.date, config.dateFromFormat, new Date()),
+                config.dateFormat
+              )}
+            </p>
           </header>
           <Img
-            fluid={post.frontmatter.illustration.childImageSharp.fluid}
-            alt={post.frontmatter.title}
+            fluid={post.illustration.childImageSharp.fluid}
+            alt={post.title}
           />
           <section
-            dangerouslySetInnerHTML={{ __html: post.html }}
+            dangerouslySetInnerHTML={{ __html: postNode.html }}
             itemProp="articleBody"
           />
           <div className={styles.author}>-{author.name}</div>
@@ -48,7 +60,7 @@ export const pageQuery = graphql`
       html
       excerpt
       frontmatter {
-        date(formatString: "DD.MM.YY")
+        date
         description
         title
         illustration {
