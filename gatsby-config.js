@@ -71,5 +71,11 @@ module.exports = {
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
+    {
+      resolve: "gatsby-plugin-nprogress",
+      options: {
+        color: config.themeColor,
+      },
+    },
   ],
 };
